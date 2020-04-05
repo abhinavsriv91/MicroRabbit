@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="EventHandlers\" />
+    <Folder Include="Events\" />
+    <Folder Include="Commnads\" />
+  </ItemGroup>
+
 </Project>
