@@ -1,6 +1,9 @@
 using MediatR;
 using MicroRabbit.Banking.Data.Context;
+using MicroRabbit.Domain.Core.Bus;
 using MicroRabbit.Infr.IOC;
+using MicroRabbit.Transfer.Domain.EventHandlers;
+using MicroRabbit.Transfer.Domain.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System;
 
 namespace MicroRabbit.Banking.Api
 {
@@ -69,8 +73,6 @@ namespace MicroRabbit.Banking.Api
             {
                 C.SwaggerEndpoint("/swagger/V1/swagger.json", "Banking Microservice v1");
             });
-
-            //app.UseMvc();
         }
     }
 }
